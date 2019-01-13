@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'schedule',
-    styleUrls: ['schedule.component.scss'],
-    templateUrl: 'schedule.component.html'
+  selector: 'schedule',
+  styleUrls: ['schedule.component.scss'],
+  template: `
+    <div>
+      Schedule
+    </div>
+  `
 })
 export class ScheduleComponent {
+  constructor() {}
 }

@@ -4,13 +4,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { Store } from 'store';
 
+// feature modules
 import { AuthModule } from '../auth/auth.module';
-
-import { AppComponent } from './containers/app/app.component';
-import { AppHeaderComponent } from './components/app-header/app-header.component';
-import { AppNavComponent } from './components/app-nav/app-nav.component';
 import { HealthModule } from '../health/health.module';
 
+// containers
+import { AppComponent } from './containers/app/app.component';
+
+// components
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { AppNavComponent } from './components/app-nav/app-nav.component';
+
+// routes
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'schedule' }
 ];
@@ -18,9 +23,9 @@ export const ROUTES: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
+    RouterModule.forRoot(ROUTES),
     AuthModule,
-    HealthModule,
-    RouterModule.forRoot(ROUTES)
+    HealthModule
   ],
   declarations: [
     AppComponent,
